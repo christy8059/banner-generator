@@ -15,25 +15,23 @@
              
              var teacherName= $('#teachersName').val();
              $('#thirdP').html(teacherName);
-             
-             
-            var date= $('#date').val();
-            $('fourthP').html(date);
-             
+            
+            var date = $('#date').val();
+            $('#fourthP').html(date);
          });
-         
-          
-         
-        });
+         });
     </script>
+    
     <style>
        .certificate{
            margin: 50px; 
-           background: White;
+           background: Red;
            text-align: center;
            font-size: 50px;
            width:700px;
            height: 500px ;
+           border: solid;
+
        } 
        p{
            display:none;
@@ -46,8 +44,10 @@
     <h1> Banner Generator</h1>
     Full Name: <input id= "fullName" type="text" name="First name"> <br> 
     Teachers Name: <input id= "teachersName" type="text" name="Last name"> <br>
-    Date: <input id= "date" type="text" name="Date"> <br>
+    Date:<input id ="date" type = "date" name= "date">
+           
 
+       
     
     <br> <button id= "button">Generate </button>
     
