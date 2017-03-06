@@ -7,56 +7,70 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
         $(function() {
-        
-         $('button').click(function(){
-             var fullName= $('#fullName').val();
-             $('#secondP').html(fullName);
-             $('p').fadeIn(2000);
-             
-             var teacherName= $('#teachersName').val();
-             $('#thirdP').html(teacherName);
-            
-            var date = $('#date').val();
-            $('#fourthP').html(date);
-         });
-         });
-    </script>
-    
-    <style>
-       .certificate{
-           margin: 50px; 
-           background: Red;
-           text-align: center;
-           font-size: 50px;
-           width:700px;
-           height: 500px ;
-           border: solid;
 
-       } 
-       p{
-           display:none;
-       }
+            $('button').click(function() {
+                $('p').fadeIn(2000);
+                // $('#2').fadeIn(2000);
+
+                var fullName = $('#fullName').val();
+                $('#secondP').html(fullName);
+
+                var date = $('#date').val();
+                $('#thirdP').html(date);
+                 var teachersName= $('#teachersName').val();
+                $('#fourthP').html("For " + teachersName + ' 'class');
+            });
+        });
+    </script>
+
+    <style>
+        .certificate {
+            margin: 50px;
+            background: white;
+            text-align: center;
+            font-size: 50px;
+            width: 700px;
+            height: 500px;
+            border: solid;
+            border-color: blue;
+        }
+        
+        p {
+            display: none;
+            font-size: 30px;
+        }
+        
+        #2 {
+            display: none;
+            font-size: 30px;
+        }
+        
+        #3 {
+            display: none;
+            font-size: 30px;
+        }
     </style>
 </head>
 
 <body>
 
     <h1> Banner Generator</h1>
-    Full Name: <input id= "fullName" type="text" name="First name"> <br> 
-    Teachers Name: <input id= "teachersName" type="text" name="Last name"> <br>
-    Date:<input id ="date" type = "date" name= "date">
-           
+    Full Name: <input id="fullName" type="text" name="First name"> <br>
+    Date: <input  id="date" id="date" type="text" value="Month, Year"> <br>
+    Teachers Name: <input id="teachersName" type="text" name="Last name"> <br>
 
-       
-    
-    <br> <button id= "button">Generate </button>
-    
-    <div class= certificate> 
-    
-    <p>Student of the Month</p>
-    <p id= secondP></p>
-    <p id= thirdP></p> 
-    <p id= fourthP></p>
+
+    <br> <button id="button">Generate </button>
+
+    <div class=certificate>
+
+        <p>Student of the Month</p>
+        <p id=2> This certificate recognizes:  </p>
+        <p id=secondP></p>
+        <p id=3> Chosen student of the month:  </p>
+        <p id=thirdP></p>
+        <p id=fourthP></p>
+        <p id=fiftthP></p>
     </div>
 </body>
 
