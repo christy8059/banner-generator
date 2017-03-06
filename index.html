@@ -10,7 +10,6 @@
 
             $('button').click(function() {
                 $('p').fadeIn(2000);
-                // $('#2').fadeIn(2000);
 
                 var fullName = $('#fullName').val();
                 $('#secondP').html(fullName);
@@ -18,7 +17,7 @@
                 var date = $('#date').val();
                 $('#thirdP').html(date);
                  var teachersName= $('#teachersName').val();
-                $('#fourthP').html("For " + teachersName + ' class');
+                $('#fourthP').html(teachersName + "s Class");
             });
         });
     </script>
@@ -67,9 +66,9 @@
         <p>Student of the Month</p>
         <p id=2> This certificate recognizes:  </p>
         <p id=secondP></p>
-        <p id=3> Chosen student of the month:  </p>
-        <p id=thirdP></p>
+        <p id=3> Student of the Month for  </p>
         <p id=fourthP></p>
+        <p id=thirdP></p>
     </div>
 </body>
 
