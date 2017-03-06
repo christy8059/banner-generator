@@ -7,7 +7,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
         $(function() {
-
             $('button').click(function() {
                 $('p').fadeIn(2000);
 
@@ -16,12 +15,19 @@
 
                 var date = $('#date').val();
                 $('#thirdP').html(date);
-                 var teachersName= $('#teachersName').val();
+               
+                var teachersName = $('#teachersName').val();
                 $('#fourthP').html(teachersName + "'s Class");
+
+                var bColor = ["white", "red", "green", "yellow", "orange", "blue", "purple", "pink"];
+                
+                var randomNumber = Math.floor(Math.random() * bColor.length);
+                
+                $('.certificate').css('background-color', bColor[randomNumber]);
+
+
             });
         });
-        
-        var bColor =[ white, red, green, yellow, orange, blue, purple, pink];
     </script>
 
     <style>
@@ -56,9 +62,7 @@
 <body>
 
     <h1> Banner Generator</h1>
-    Full Name: <input id="fullName" type="text" name="First name"> <br>
-    Date: <input  id="date" id="date" type="text" value="Month, Year"> <br>
-    Teachers Name: <input id="teachersName" type="text" name="Last name"> <br>
+    Full Name: <input id="fullName" type="text" name="First name"> <br> Date: <input id="date" id="date" type="text" value="Month, Year"> <br> Teachers Name: <input id="teachersName" type="text" name="Last name"> <br>
 
 
     <br> <button id="button">Generate </button>
@@ -66,9 +70,9 @@
     <div class=certificate>
 
         <p>Student of the Month</p>
-        <p id=2> This certificate recognizes:  </p>
+        <p id=2> This certificate recognizes: </p>
         <p id=secondP></p>
-        <p id=3> Student of the Month for  </p>
+        <p id=3> Student of the Month for </p>
         <p id=fourthP></p>
         <p id=thirdP></p>
     </div>
